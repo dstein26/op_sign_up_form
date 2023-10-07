@@ -1,11 +1,23 @@
 @import url(myResetCss/myReset.css);
 
+
+@font-face {
+    font-family: Rapscallion;
+    src: url("Assets/Font_Rapscallion/RAPSCALL.ttf");
+}
+
+
+@font-face {
+    font-family: Leander;
+    src: url("Assets/Font_Leander/Leander.ttf");
+}
+
 :root
 {
-    --bg-color: black;
-    --text-color: white;
-    --form-color: rgb(49, 49, 49);
-    --highlight-color: yellow;
+    --bg-color: rgb(211, 179, 131);
+    --text-color: black;
+    --form-color: rgb(182, 150, 102);
+    --highlight-color: rgb(250, 6, 6);
 
     --footer-size: 1em;
 }
@@ -41,6 +53,18 @@ footer
     height: var(--footer-size);
 }
 
+p,label
+{
+    font-family: Leander;
+    font-size: 1em;
+}
+
+h2
+{
+    font-family: Rapscallion;
+    font-size: 3em;
+}
+
 #icon
 {
     display: grid;
@@ -63,7 +87,10 @@ footer
     transition-delay: 0.5s;
     transition-timing-function: cubic-bezier(.47,.52,.61,1.31);
 }
-
+#form
+{
+    background-image: url("Assets/golden-parchment-paper-texture.jpg");
+}
 #form input
 {
     color: var(--text-color);
@@ -80,11 +107,6 @@ footer
 {
     margin: 0px 2px 1em 2px;
 }
-
-#fn { grid-area: fn; }
-#fnl { grid-area: fnl; }
-#ln { grid-area: ln; }
-#lnl { grid-area: lnl; }
 
 #form > form
 {
