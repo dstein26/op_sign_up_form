@@ -1,0 +1,74 @@
+@import url(myResetCss/myReset.css);
+
+:root
+{
+    --bg-color: black;
+    --text-color: white;
+    --form-color: rgb(49, 49, 49);
+    --highlight-color: yellow;
+
+    --footer-size: 1em;
+}
+
+body, html
+{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main
+{
+    --border-width: 1px;
+
+    background-color: var(--highlight-color);
+    display: grid;
+    grid-template-columns: 48% 1fr;  
+    grid-template-rows: calc(100vh - 2*var(--border-width) - var(--footer-size));
+    gap: var(--border-width);
+    border: var(--border-width) solid var(--highlight-color);
+}
+
+main > *
+{
+    background-color: var(--bg-color);
+}
+
+footer
+{
+    height: var(--footer-size);
+}
+
+#form input
+{
+    color: var(--text-color);
+    background-color: var(--form-color);
+
+    border: none;
+    border-bottom: 1px solid var(--highlight-color);
+    border-radius: 5px;
+    margin: 5px 2px 5px 0px;
+    padding: 2px 5px 2px 5px;
+}
+
+#form label
+{
+    margin: 0px 2px 5px 2px;
+}
+
+#fn { grid-area: fn; }
+#fnl { grid-area: fnl; }
+#ln { grid-area: ln; }
+#lnl { grid-area: lnl; }
+
+#form > form
+{
+    padding: 10px;
+    display: grid;
+    grid-template: 
+        'fn     ln'
+        'fnl    lnl'
+        '.      .';
+}
