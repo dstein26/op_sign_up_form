@@ -41,6 +41,29 @@ footer
     height: var(--footer-size);
 }
 
+#icon
+{
+    display: grid;
+    grid-template: 'icon';
+}
+
+#icon >  img
+{
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    grid-area: icon;
+}
+
+#needle
+{
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition-property: transform;
+    transition-duration: 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: cubic-bezier(.47,.52,.61,1.31);
+}
+
 #form input
 {
     color: var(--text-color);

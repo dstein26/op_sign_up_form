@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Black Cat Form</title>
+        <title>To Adventure!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -12,8 +12,11 @@
         <main>
             <div id="logo" class="column">
                 <p>Column 1</p>
-                <!--<img src="Assets/black-cat-1476285093IXH.jpg" 
-                style="transform: scaleX(-1);">-->
+                <div id="icon">
+                    <!--<object type="image/svg+xml" data="Assets/Compass_Body.svg"></object>-->
+                    <img src="Assets/Compass_Body.svg">
+                    <img id="needle" src="Assets/Compass_Needle.svg">
+                </div>
             </div>
             <div id="form" class="column">
                 <form>
@@ -36,6 +39,6 @@
         <footer>
             <small>Copywrite Daniel Stein, 2023</small>
         </footer>
-        <script src="" async defer></script>
+        <script src="needleAnimation.js" async defer></script>
     </body>
 </html>
