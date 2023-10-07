@@ -16,12 +16,20 @@
                 style="transform: scaleX(-1);">-->
             </div>
             <div id="form" class="column">
-                <h2><b>Form</b></h2>
                 <form>
-                    <label for="firstName" id="fnl">First Name</label>
-                    <input type="text" name="firstName" id="fn">
-                    <label for="lastName" id="lnl">Last Name</label>
-                    <input type="text" name="lastName" id="ln">
+                    <h2 style="grid-area: header;"><b>Contact Form</b></h2>
+                    <input type="text" name="firstName" style="grid-area: fn;">
+                    <label for="firstName" style="grid-area: fnl;">First Name</label>
+                    <input type="text" name="lastName" style="grid-area: ln;">
+                    <label for="lastName" style="grid-area: lnl;">Last Name</label>
+                    <input type="tel" name="tel" style="grid-area: tel;">
+                    <label for="tel" style="grid-area: tell;">Phone Number</label>
+                    <input type="password" name="pass" style="grid-area: pass;">
+                    <label for="pass" style="grid-area: passl;">Password</label>
+                    <input type="password" name="cpass" style="grid-area: cpass;">
+                    <label for="cpass" style="grid-area: cpassl;">Confirm Password</label>
+                    <input type="checkbox" name="agreement" style="grid-area: cb;">
+                    <label for="agreement" style="grid-area: cb;"><small>By checking this box you agree that you understand this does nothing. This is not a real service and you will not get anything from this contact form.</small></label>
                 </form>
             </div>
         </main>

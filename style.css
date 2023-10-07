@@ -55,7 +55,7 @@ footer
 
 #form label
 {
-    margin: 0px 2px 5px 2px;
+    margin: 0px 2px 1em 2px;
 }
 
 #fn { grid-area: fn; }
@@ -67,8 +67,17 @@ footer
 {
     padding: 10px;
     display: grid;
-    grid-template: 
+    grid-template:
+        'header header' 
         'fn     ln'
         'fnl    lnl'
-        '.      .';
+        '.      .'
+        'email  tel'
+        'emaill tell'
+        'pass   .'
+        'passl  .'
+        'cpass  .'
+        'cpassl .'
+        'cb     cb'
+        '.      button';
 }
