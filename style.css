@@ -69,6 +69,7 @@ h2
 {
     display: grid;
     grid-template: 'icon';
+    height:100%;
 }
 
 #icon >  img
