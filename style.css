@@ -19,7 +19,7 @@
     --form-color: rgb(182, 150, 102);
     --highlight-color: rgb(250, 6, 6);
 
-    --footer-size: 1em;
+    --footer-size: 2em;
 }
 
 body, html
@@ -29,6 +29,7 @@ body, html
     box-sizing: border-box;
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: Leander;
 }
 
 main
@@ -50,26 +51,43 @@ main > *
 
 footer
 {
+    text-align: center;
     height: var(--footer-size);
 }
 
 p,label
 {
-    font-family: Leander;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 h2
 {
     font-family: Rapscallion;
     font-size: 3em;
+    text-align: center;
+}
+
+h3
+{
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+#logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Assets/St-Lucia-Caribbean-Sea.jpg);
 }
 
 #icon
 {
     display: grid;
     grid-template: 'icon';
-    height:100%;
+    max-width:60%;
+    max-height:60%;
+    aspect-ratio: 1 / 1;
 }
 
 #icon >  img
@@ -88,11 +106,41 @@ h2
     transition-delay: 0.5s;
     transition-timing-function: cubic-bezier(.47,.52,.61,1.31);
 }
-#form
+#address
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url("Assets/golden-parchment-paper-texture.jpg");
+    overflow: scroll;
 }
-#form input
+
+#show-form
+{
+    border: 1px solid var(--highlight-color);
+    border-radius:0.75em;
+    background-color: rgba(194, 169, 123, 0.486);
+}
+
+#show-form:hover
+{
+    background-color: rgba(241, 211, 153, 0.486);
+}
+
+#myForm
+{
+    background-color: rgba(240, 190, 126, 0.493);
+    width:85%;
+    transform: scaleY(1);
+    margin: 0.5em;
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in;
+}
+
+#myForm input
 {
     color: var(--text-color);
     background-color: var(--form-color);
@@ -104,12 +152,12 @@ h2
     padding: 2px 5px 2px 5px;
 }
 
-#form label
+#myForm label
 {
     margin: 0px 2px 1em 2px;
 }
 
-#form > form
+#myForm > form
 {
     padding: 10px;
     display: grid;
