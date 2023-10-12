@@ -3,6 +3,8 @@
 
 A sign-up form for an imaginary service. Created as a part of the ODIN Project ciriculum.
 
+<a href="https://dstein26.github.io/op_sign_up_form/">Preview Available</a>
+
 ****
 ## Credits:
 Carribean image: https://sostrenews.com/wp-content/uploads/2016/06/St-Lucia-Caribbean-Sea.jpg
