@@ -16,7 +16,11 @@
 {
     --bg-color: rgb(211, 179, 131);
     --text-color: black;
-    --form-color: rgb(182, 150, 102);
+    --form-color: rgba(240, 190, 126, 0.4);
+    --button-color: rgba(194, 169, 123, 0.4);
+    --button-hover-color: rgba(228, 205, 163, 0.4);
+    --input-color: rgb(182, 150, 102);
+    --input-hover-color: rgb(219, 192, 151);
     --highlight-color: rgb(250, 6, 6);
 }
 
@@ -129,19 +133,19 @@ h3
 {
     border: 1px solid var(--highlight-color);
     border-radius:0.75em;
-    background-color: rgba(194, 169, 123, 0.486);
+    background-color: var(--button-color);
     max-width: 90%;
 }
 
 .button:hover
 {
-    background-color: rgba(241, 211, 153, 0.486);
+    background-color: var(--button-hover-color);
 }
 
 .button > *::after, .button > *::before
 {
     display:inline-flex;
-    /*content: url("Assets/skull_and_crossbones_noImage.svg");
+    content: url("Assets/skull_and_crossbones_noImage.svg");
     /*border: 1px solid black;*/
     height:1em;
     width: 1em;
@@ -155,28 +159,48 @@ h3
     box-sizing: border-box;
     border: 2px solid var(--highlight-color);
     border-radius: 10px;
-    background-color: rgba(240, 190, 126, 0.493);
+    background-color: var(--form-color);
     
     /*transform: scaleY(0);
-    transition-property: transform;
+    transition-property: transform; */
     max-height: 0px;
     overflow: hidden;
     transition-property: max-height;
     transition-duration: 0.2s;
     transition-delay: 0s;
-    transition-timing-function: ease-out; */
+    transition-timing-function: ease-out;
 }
 
 #myForm input
 {
     color: var(--text-color);
-    background-color: var(--form-color);
+    background-color: var(--input-color);
 
-    border: none;
-    border-bottom: 1px solid var(--highlight-color);
+    border: 2px solid var(--input-color);
     border-radius: 5px;
     margin: 5px 2px 5px 0px;
     padding: 2px 5px 2px 5px;
+}
+
+#myForm input:hover
+{
+    background-color: var(--input-hover-color);
+}
+
+#myForm input:invalid
+{
+    border: 2px dashed var(--highlight-color)
+}
+
+#myFrom input:invalid::after
+{
+    color: var(--highlight-color);
+    content: "Invalid Entry";
+}
+
+#myForm input:focus
+{
+    border: 2px solid var(--input-color);
 }
 
 #myForm label
