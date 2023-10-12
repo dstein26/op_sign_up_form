@@ -18,8 +18,6 @@
     --text-color: black;
     --form-color: rgb(182, 150, 102);
     --highlight-color: rgb(250, 6, 6);
-
-    --footer-size: 2em;
 }
 
 body, html
@@ -32,27 +30,36 @@ body, html
     font-family: Leander;
 }
 
+body
+{
+    display: flex;
+    flex-direction: column;
+}
+
 main
 {
-    --border-width: 1px;
+    --border-width: 0px;
 
     background-color: var(--highlight-color);
     display: grid;
     grid-template-columns: 48% 1fr;  
-    grid-template-rows: calc(100vh - 2*var(--border-width) - var(--footer-size));
+    /* grid-template-rows: calc(100vh - 2*var(--border-width) - var(--footer-size)); */
+    flex:1;
     gap: var(--border-width);
     border: var(--border-width) solid var(--highlight-color);
+    Height:90%;
 }
 
+/*
 main > *
 {
     background-color: var(--bg-color);
 }
+*/
 
 footer
 {
     text-align: center;
-    height: var(--footer-size);
 }
 
 p,label
@@ -113,31 +120,51 @@ h3
     align-items: center;
     background-image: url("Assets/golden-parchment-paper-texture.jpg");
     overflow: scroll;
+    padding:10% 2% 0 2%;
+    height:100%;
+    box-sizing: border-box;
 }
 
-#show-form
+.button
 {
     border: 1px solid var(--highlight-color);
     border-radius:0.75em;
     background-color: rgba(194, 169, 123, 0.486);
+    max-width: 90%;
 }
 
-#show-form:hover
+.button:hover
 {
     background-color: rgba(241, 211, 153, 0.486);
 }
 
+.button > *::after, .button > *::before
+{
+    display:inline-flex;
+    /*content: url("Assets/skull_and_crossbones_noImage.svg");
+    /*border: 1px solid black;*/
+    height:1em;
+    width: 1em;
+}
+
 #myForm
 {
+    width:100%;
+    padding: 0; /*5%*/
+    margin: 0.5em 0 0.5em 0;
+    box-sizing: border-box;
+    border: 2px solid var(--highlight-color);
+    border-radius: 10px;
     background-color: rgba(240, 190, 126, 0.493);
-    width:85%;
-    transform: scaleY(1);
-    margin: 0.5em;
-
+    
+    /*transform: scaleY(0);
     transition-property: transform;
-    transition-duration: 0.5s;
+    max-height: 0px;
+    overflow: hidden;
+    transition-property: max-height;
+    transition-duration: 0.2s;
     transition-delay: 0s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-out; */
 }
 
 #myForm input
@@ -161,17 +188,18 @@ h3
 {
     padding: 10px;
     display: grid;
-    grid-template:
+    grid-template: 
         'header header' 
         'fn     ln'
-        'fnl    lnl'
-        '.      .'
-        'email  tel'
-        'emaill tell'
-        'pass   .'
-        'passl  .'
+        'bd     email'
+        'pass   tel'
         'cpass  .'
-        'cpassl .'
         'cb     cb'
         '.      button';
+}
+
+.input-set
+{
+    display: flex;
+    flex-direction: column;
 }

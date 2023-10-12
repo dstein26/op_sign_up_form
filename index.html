@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>To Adventure!</title>
+        <link rel="icon" type="image/x-icon" href="/Assets/skull_and_crossbones_noImage.svg">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -20,31 +21,55 @@
             <div id="address" class="column">
                 <h2>This is <em>not</em> a real service!</h2>
                 <h3>You know you need something like this in your life to help you realize your deepest dreams</h3>
-                <div id="show-form" onclick="showForm()">
+                <button id="show-form" class="button collapse"> <!--onclick="showForm()">-->
                     <h3>Sign up now for adventure</h3>
-                </div>
+                </button>
                 
 
-                <div id="myForm">
+                <div id="myForm" padding="5%">
                     <form>
                         <h2 style="grid-area: header;">Contact Form</h2>
-                        <input type="text" name="firstName" style="grid-area: fn;">
-                        <label for="firstName" style="grid-area: fnl;">First Name</label>
-                        <input type="text" name="lastName" style="grid-area: ln;">
-                        <label for="lastName" style="grid-area: lnl;">Last Name</label>
-                        <input type="email" name="email" style="grid-area: email;">
-                        <label for="email" style="grid-area: emaill;">Email</label>
-                        <input type="tel" name="tel" style="grid-area: tel;">
-                        <label for="tel" style="grid-area: tell;">Phone Number</label>
-                        <input type="password" name="pass" style="grid-area: pass;">
-                        <label for="pass" style="grid-area: passl;">Password</label>
-                        <input type="password" name="cpass" style="grid-area: cpass;">
-                        <label for="cpass" style="grid-area: cpassl;">Confirm Password</label>
+
+                        <div class="input-set" style="grid-area: fn;">
+                            <input type="text" name="firstName" required>
+                            <label for="firstName">First Name*</label>
+                        </div>
+
+                        <div class="input-set" style="grid-area: ln">
+                            <input type="text" name="lastName" required>
+                            <label for="lastName">Last Name*</label>
+                        </div>
+
+                        <div class="input-set">
+                            <input type="date" name="birthday" required>
+                            <label for="birthday">Birthday*</label>
+                        </div>
+
+                        <div class="input-set" style="grid-area: email">
+                            <input type="email" name="email" required>
+                            <label for="email">Email*</label>
+                        </div>
+                        
+                        <div class="input-set" style="grid-area: tel">
+                            <input type="tel" name="tel">
+                            <label for="tel">Phone Number</label>
+                        </div>
+
+                        <div class="input-set" style="grid-area: pass">
+                            <input type="password" name="pass" required>
+                            <label for="pass">Password*</label>
+                        </div>
+
+                        <div class="input-set" style="grid-area: cpass">
+                            <input type="password" name="cpass" required>
+                            <label for="cpass">Confirm Password*</label>
+                        </div>
+
                         <div style="display:flex; grid-area: cb;">
-                            <input type="checkbox" name="agreement">
+                            <input type="checkbox" name="agreement" required>
                             <div><label for="agreement"><small>By checking this box you agree that you understand this does nothing. This is not a real service and you will not get anything from this contact form.</small></label></div>
                         </div>
-                        <button type="submit" style="grid-area: button;">Sign on!</button>
+                        <button type="submit" class="button" style="grid-area: button;"><p>Sign on!</p></button>
                     </form>
                 </div>
 
@@ -55,10 +80,10 @@
             <p><small>Copywrite Daniel Stein, 2023 &emsp; 
                 Parchment Background Texture: <a href="http://www.photos-public-domain.com/wp-content/uploads/2011/03/golden-parchment-paper-texture.jpg">Here</a> &emsp; 
                 Carribean image <a href="https://sostrenews.com/wp-content/uploads/2016/06/St-Lucia-Caribbean-Sea.jpg">here</a> &emsp;
-                <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Andy Horvath - Flaticon</a></small></p> 
-            <p></p>
+                <a href="https://www.flaticon.com/free-icons/skull" title="skull icons">Skull icons created by Andy Horvath - Flaticon</a>
+            </small></p>
         </footer>
         <script src="needleAnimation.js" async defer></script>
-        <script src="eventHandle.js" async defer></script>
+        <!--script src="eventHandle.js" async defer></script-->
     </body>
 </html>
