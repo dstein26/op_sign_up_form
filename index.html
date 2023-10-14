@@ -31,12 +31,12 @@
                         <h2 style="grid-area: header;">Contact Form</h2>
 
                         <div class="input-set" style="grid-area: fn;">
-                            <input type="text" name="firstName" required>
+                            <input type="text" name="firstName" minlength="3" required>
                             <label for="firstName">First Name*</label>
                         </div>
 
                         <div class="input-set" style="grid-area: ln">
-                            <input type="text" name="lastName" required>
+                            <input type="text" name="lastName" minlength="3" required>
                             <label for="lastName">Last Name*</label>
                         </div>
 
@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="input-set" style="grid-area: pass">
-                            <input type="password" name="pass" required>
+                            <input type="password" name="pass"  minlength="8" required>
                             <label for="pass">Password*</label>
                         </div>
 

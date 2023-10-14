@@ -162,13 +162,13 @@ h3
     background-color: var(--form-color);
     
     /*transform: scaleY(0);
-    transition-property: transform; */
+    transition-property: transform; *
     max-height: 0px;
     overflow: hidden;
     transition-property: max-height;
     transition-duration: 0.2s;
     transition-delay: 0s;
-    transition-timing-function: ease-out;
+    transition-timing-function: ease-out; */
 }
 
 #myForm input
@@ -192,20 +192,16 @@ h3
     border: 2px dashed var(--highlight-color)
 }
 
-#myFrom input:invalid::after
+#myForm input:invalid + label
 {
-    color: var(--highlight-color);
-    content: "Invalid Entry";
-}
-
-#myForm input:focus
-{
-    border: 2px solid var(--input-color);
+    background-color: rgba(231, 85, 85, 0.363);
 }
 
 #myForm label
 {
     margin: 0px 2px 1em 2px;
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
 }
 
 #myForm > form
